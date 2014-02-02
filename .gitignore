@@ -1,0 +1,7 @@
+/build
+/.lock.pid
+*.o
+moc_*.cpp
+qrc_*.cpp
+Makefile
+/.tern-port

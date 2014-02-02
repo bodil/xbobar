@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background: -webkit-linear-gradient(top, #45484d 0%, #000000 100%);
+    color: white;
+    font: 18pt sans-serif;
+}
+
+#root {
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    width: 100%;
+}
+
+#root > div {
+    padding: 5pt 15pt;
+}
+
+.desktops {
+
+}
+
+.windows {
+    -webkit-flex-grow: 1;
+}
+
+.indicators {
+
+}
+
+.clock {
+
+}

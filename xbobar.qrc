@@ -1,0 +1,12 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource>
+    <file>lib/index.html</file>
+    <file>lib/react.js</file>
+    <file>lib/prelude.js</file>
+    <file>lib/fs.js</file>
+    <file>lib/dom.js</file>
+    <file>lib/jquery.js</file>
+    <file>lib/moment.js</file>
+  </qresource>
+</RCC>
