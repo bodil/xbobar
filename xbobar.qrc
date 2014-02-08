@@ -6,6 +6,8 @@
     <file>lib/prelude.js</file>
     <file>lib/fs.js</file>
     <file>lib/dom.js</file>
+    <file>lib/dbus.js</file>
+    <file>lib/networkmanager.js</file>
     <file>lib/jquery.js</file>
     <file>lib/moment.js</file>
   </qresource>

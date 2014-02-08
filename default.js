@@ -3,6 +3,7 @@
 var dom = require("dom");
 var $ = require("jquery");
 var moment = require("moment");
+var dbus = require("dbus");
 
 dom.loadCss("default.css");
 
@@ -34,3 +35,10 @@ React.renderComponent(root, document.body);
 
 dom.showFrame();
 dom.resizeFrame($("#root").outerHeight(), "top");
+
+dbus.getProperties(dbus.systemBus,
+                   "org.freedesktop.NetworkManager", "/org/freedesktop/NetworkManager",
+                   "org.freedesktop.NetworkManager",
+                  function(err, data) {
+                    console.log("dbus.getProperties:", err, data);
+                  });
