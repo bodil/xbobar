@@ -9,7 +9,7 @@ HEADERS += api.h bobar.h dbus.h uuid.h x11.h
 SOURCES += api.cpp bobar.cpp dbus.cpp uuid.cpp x11.cpp
 RESOURCES += xbobar.qrc
 LIBS += -lX11
-# PKGCONFIG += NetworkManagerQt
+PKGCONFIG += dbus-1
 QMAKE_CXXFLAGS += -std=gnu++11
 
 jsdoc.depends = $${JSSOURCES}

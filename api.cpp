@@ -3,8 +3,8 @@
 
 #include "api.h"
 #include "bobar.h"
-#include "dbus.h"
 #include "uuid.h"
+#include "dbus.h"
 
 API::API(Page* parent, BobarWindow* window)
   : QObject(parent)
@@ -14,8 +14,7 @@ API::API(Page* parent, BobarWindow* window)
   setObjectName("bobar");
   QObject* dbus = new QObject(this);
   dbus->setObjectName("DBus");
-  new DBus::Interface(QDBusConnection::systemBus(), "systemBus", dbus);
-  new DBus::Interface(QDBusConnection::sessionBus(), "sessionBus", dbus);
+  new DBus::Interface(DBUS_BUS_SYSTEM, "systemBus", dbus);
 }
 
 bool isFilePath(const QString& path) {

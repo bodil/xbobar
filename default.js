@@ -4,6 +4,7 @@ var dom = require("dom");
 var $ = require("jquery");
 var moment = require("moment");
 var dbus = require("dbus");
+var nm = require("networkmanager");
 
 dom.loadCss("default.css");
 
@@ -36,9 +37,26 @@ React.renderComponent(root, document.body);
 dom.showFrame();
 dom.resizeFrame($("#root").outerHeight(), "top");
 
-dbus.getProperties(dbus.systemBus,
-                   "org.freedesktop.NetworkManager", "/org/freedesktop/NetworkManager",
-                   "org.freedesktop.NetworkManager",
-                  function(err, data) {
-                    console.log("dbus.getProperties:", err, data);
-                  });
+function debug(obs) {
+  obs.subscribe(function(result) {
+    console.log("result:", result);
+  }, function(error) {
+    console.error("error:", error);
+  });
+}
+
+// __bobar.DBus.systemBus.call("org.freedesktop.NetworkManager",
+//                             "/org/freedesktop/NetworkManager",
+//                             "org.freedesktop.DBus.Properties",
+//                             "GetAll", ["org.freedesktop.NetworkManager"])
+//   .done.connect(function(err,data) {
+//     console.log(err, data);
+//   });
+
+debug(
+  nm.getDevices()
+    .flatMap(function(dev) {
+      console.log(dev);
+      return nm.getDeviceInfo(dev);
+    })
+);
