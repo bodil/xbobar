@@ -15,6 +15,7 @@ API::API(Page* parent, BobarWindow* window)
   QObject* dbus = new QObject(this);
   dbus->setObjectName("DBus");
   new DBus::Interface(DBUS_BUS_SYSTEM, "systemBus", dbus);
+  new DBus::Interface(DBUS_BUS_SESSION, "sessionBus", dbus);
 }
 
 bool isFilePath(const QString& path) {
