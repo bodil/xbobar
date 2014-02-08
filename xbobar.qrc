@@ -10,5 +10,16 @@
     <file>lib/networkmanager.js</file>
     <file>lib/jquery.js</file>
     <file>lib/moment.js</file>
+    <file>lib/rx.js</file>
+    <file>lib/rx.core.js</file>
+    <file>lib/rx.aggregates.js</file>
+    <file>lib/rx.async.js</file>
+    <file>lib/rx.binding.js</file>
+    <file>lib/rx.coincidence.js</file>
+    <file>lib/rx.experimental.js</file>
+    <file>lib/rx.joinpatterns.js</file>
+    <file>lib/rx.time.js</file>
+    <file>lib/rx.virtualtime.js</file>
+    <file>lib/rx.testing.js</file>
   </qresource>
 </RCC>
