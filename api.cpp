@@ -5,6 +5,7 @@
 #include "bobar.h"
 #include "uuid.h"
 #include "dbus.h"
+#include "tray.h"
 
 API::API(Page* parent, BobarWindow* window)
   : QObject(parent)
@@ -16,6 +17,7 @@ API::API(Page* parent, BobarWindow* window)
   dbus->setObjectName("DBus");
   new DBus::Interface(DBUS_BUS_SYSTEM, "systemBus", dbus);
   new DBus::Interface(DBUS_BUS_SESSION, "sessionBus", dbus);
+  (new Tray(this))->setObjectName("Tray");
 }
 
 bool isFilePath(const QString& path) {
