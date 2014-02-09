@@ -19,6 +19,31 @@ loves the DOM.
 This is absolutely not anywhere close to being complete and usable.
 Pull requests welcome.
 
+# Building
+
+You'll need Qt5 and libdbus installed and working. Substitute for your
+preferred platform:
+
+```shell
+$ pacman -S qt5-base qt5-webkit libdbus
+```
+
+To build the binary and JSDoc:
+
+```shell
+$ qmake
+$ make
+$ make jsdoc
+```
+
+# Running
+
+From your checkout:
+
+```shell
+$ ./build/xbobar --debug default.js
+```
+
 # License
 
 Copyright 2014 Bodil Stokke
