@@ -24,13 +24,13 @@ Pull requests welcome.
 You'll need Qt5 and libdbus installed and working. Substitute for your
 preferred platform:
 
-```shell
+```sh
 $ pacman -S qt5-base qt5-webkit libdbus
 ```
 
 To build the binary and JSDoc:
 
-```shell
+```sh
 $ qmake
 $ make
 $ make jsdoc
@@ -40,7 +40,7 @@ $ make jsdoc
 
 From your checkout:
 
-```shell
+```sh
 $ ./build/xbobar --debug default.js
 ```
 
